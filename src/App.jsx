@@ -1,20 +1,32 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [dogDataMaster, setDogDataMaster] = useState({ message: null });
+
+  useEffect(() => {
+    const fetchAllDogData = async () => {
+      const rawData = await fetch('http://localhost:5000/all/');
+      const jsonData = await rawData.json();
+      setDogDataMaster(jsonData);
+      console.log('DATA RECIEVED:', jsonData);
+    };
+    fetchAllDogData().catch((ERR) => console.log('FETCH ERROR:', ERR));
+  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
+        <div>
+          <p>Dog Data:</p>
+          {dogDataMaster.message &&
+            Object.keys(dogDataMaster.message).map((dogBreed) => (
+              <p key={dogBreed}>{dogBreed}</p>
+            ))}
+        </div>
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
         </p>
@@ -39,7 +51,7 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
