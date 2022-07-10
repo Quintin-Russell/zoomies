@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "start-api": "cd api && venv/bin/flask run",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
