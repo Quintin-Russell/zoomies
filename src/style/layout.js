@@ -17,9 +17,9 @@ export default {
     justify-content: space-between;
   `,
 
-  //   justCent: css`
-  //     justify-content: center;
-  //   `,
+  justCent: css`
+    justify-content: center;
+  `,
 
   //   justEnd: css`
   //     justify-content: flex-end;
@@ -57,15 +57,15 @@ export default {
 
   width50: css`
     width: 50%;
-  `
+  `,
 
   //   width80: css`
   //     width: 80%;
   //   `,
 
-  //   width100: css`
-  //     width: 100%;
-  //   `,
+  width100: css`
+    width: 100%;
+  `,
 
   //   height80: css`
   //     height: 80%;
@@ -77,13 +77,13 @@ export default {
 
   //   //padding/margin ctrls
 
-  //   padding0: css`
-  //     padding: 0;
-  //   `,
+  padding0: css`
+    padding: 0;
+  `,
 
-  //   padding25: css`
-  //     padding: 0.25rem;
-  //   `,
+  padding25: css`
+    padding: 0 0.25rem;
+  `,
 
   //   padding2rem: css`
   //     padding: 2rem;
@@ -101,9 +101,9 @@ export default {
   //     padding-left: 1rem;
   //   `,
 
-  //   headerPadding: css`
-  //     padding: 0 1rem;
-  //   `,
+  headerPadding: css`
+    padding: 0 1rem;
+  `,
 
   //   smallSidePadding: css`
   //     padding: 0 0.25rem;
@@ -113,9 +113,9 @@ export default {
   //     margin: auto;
   //   `,
 
-  //   margin0: css`
-  //     margin: 0;
-  //   `,
+  margin0: css`
+    margin: 0;
+  `,
 
   //   marginHalfRem: css`
   //     margin: 0.5rem;
@@ -136,4 +136,9 @@ export default {
   //   leftMargin: css`
   //     padding-left: 0.5rem;
   //   `
+  //IMGS
+  dogImg: css`
+    height: 2rem;
+    padding: 0 0.5rem;
+  `
 };

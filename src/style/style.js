@@ -12,9 +12,9 @@ export default {
   //     font-weight: 600;
   //   `,
 
-  //   light: css`
-  //     font-weight: 100;
-  //   `,
+  weight300: css`
+    font-weight: 300;
+  `,
 
   //   fade: css`
   //     background: linear-gradient(
@@ -48,12 +48,8 @@ export default {
   //   font3rem: css`
   //     font-size: 3rem;
   //   `,
-
-  //   textCent: css`
-  //     text-align: center;
-  //   `,
-
   //   //component specific text
+
   //   fadeTxt: css`
   //     font-size: 2rem;
   //     font-weight: 300;
@@ -95,8 +91,8 @@ export default {
   //   //borders
 
   border: css`
-    border: 0.15rem solid black;
-  `
+    border: 0.1rem solid black;
+  `,
 
   //   noBorderBottom: css`
   //     border-top: 0.05rem solid #fff;
@@ -157,4 +153,10 @@ export default {
   //   img: css`
   //     height: 5rem;
   //   `
+  headerBackground: css`
+    background-color: #898aa6;
+  `,
+  dropShaddow: css`
+    filter: drop-shadow(0 0.25rem 0.25rem rgb(0 0 0 / 40%)); ;
+  `
 };
