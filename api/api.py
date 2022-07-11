@@ -12,11 +12,9 @@ def get_all_dog_data():
     req = requests.get("https://dog.ceo/api/breeds/list/all")
     return req.content
 
-#route to query for breed image
+#route to query for breed image array/list
 @app.route('/image/<name>/')
 def get_breed_img(name):
     imgReq = requests.get("https://dog.ceo/api/breed/" + name + "/images")
     parsedReq = json.loads(imgReq.content)
-    return {
-    "message" : parsedReq["message"]
-    }
+    return parsedReq

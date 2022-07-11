@@ -3,7 +3,6 @@ import { css, jsx } from '@emotion/react';
 
 import ContentContainer from './content-container';
 import InfoBar from './info-bar';
-import { BiChevronDownCircle, BiCaretDown } from 'react-icons/bi';
 
 import style from '../style/style';
 import layout from '../style/layout';

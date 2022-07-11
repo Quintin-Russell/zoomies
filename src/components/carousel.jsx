@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { jsx, css } from '@emotion/react';
 
-import { RiFocusFill, RiCheckboxBlankCircleLine } from 'react-icons/ri';
-
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight
@@ -11,9 +9,12 @@ import {
 import style from '../style/style';
 import layout from '../style/layout';
 
-const cont = [layout.row, layout.justCent, layout.alignC];
-const arrow = [layout.row, layout.justCent, style.fontSize2rem, style.hover];
+//style arrays
+const rowCentered = [layout.row, layout.alignC, layout.justSpbw];
+const wholeContainer = [...rowCentered, layout.width85, layout.padding1rem];
+const arrow = [...rowCentered, style.fontSize2rem, style.hover];
 const dots = [style.hover, style.fontSize1rem];
+//----------------------------------
 
 export default function Carousel(props) {
   const [currentImg, setCurrentImg] = useState(0);
@@ -32,28 +33,17 @@ export default function Carousel(props) {
 
   return (
     <>
-      <div
-        css={[
-          layout.flex,
-          layout.row,
-          layout.alignC,
-          layout.justSpbw,
-          layout.width85,
-          layout.padding1rem
-        ]}
-      >
+      <div css={wholeContainer}>
         <div css={arrow} onClick={() => prevImg()}>
           <MdOutlineKeyboardArrowLeft />
         </div>
 
-        <div css={[...cont, layout.col]}>
-          <div css={cont}>
-            <img
-              css={[layout.breedImg]}
-              src={props.urlArray[currentImg]}
-              alt="dog-image"
-            />
-          </div>
+        <div css={[...rowCentered, layout.col]}>
+          <img
+            css={[layout.breedImg]}
+            src={props.urlArray[currentImg]}
+            alt="dog-image"
+          />
         </div>
 
         <div css={arrow} onClick={() => nextImg()}>

@@ -36,10 +36,7 @@ const ContentContainer = (props) => {
     <div css={contentContainer}>
       <div>
         {urlArray.length < 1 && <p>Loading...</p>}
-        {
-          urlArray.length > 0 && <Carousel urlArray={urlArray} />
-          // <img css={breedImg} src={imgUrl[0]} alt={props.data.name} />
-        }
+        {urlArray.length > 0 && <Carousel urlArray={urlArray} />}
         <div css={subBreedContainer}>
           {props.data.data.length > 0 && (
             <React.Fragment>
