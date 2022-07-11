@@ -22,8 +22,7 @@ const headerLogo = [
   layout.width50,
   layout.headerPadding,
   style.pfDisp,
-  layout.alignC,
-  style.weight300
+  layout.alignC
 ];
 const dogImg = [layout.dogImg];
 

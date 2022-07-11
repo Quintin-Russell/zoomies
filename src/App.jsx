@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Header from './components/header';
+import Footer from './components/footer';
 import Box from './components/box';
 
 import { BiSearchAlt } from 'react-icons/bi';
@@ -93,7 +94,7 @@ function App() {
         </div>
         <p css={[layout.margin0, layout.textAlignC, style.fontBlack]}>
           Hit the search icon and we'll see if we can find the breed you are
-          looking for
+          looking for.
         </p>
       </form>
       {userSearchResult && (
@@ -141,6 +142,7 @@ function App() {
             );
           })}
       </ul>
+      <Footer />
     </React.Fragment>
   );
 }
