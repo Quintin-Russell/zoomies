@@ -89,6 +89,7 @@ function App() {
             We could not find the breed that you searched for. Please try again
             or feel free to browse the full list of breeds below!
           </p>
+          {/* add button here to clear element and browse all breeds */}
         </div>
       )}
       <div css={sectionHeader}>
