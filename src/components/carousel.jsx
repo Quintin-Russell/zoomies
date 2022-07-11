@@ -39,13 +39,11 @@ export default function Carousel(props) {
         </div>
 
         <div css={[...rowCentered, layout.col]}>
-          <div css={rowCentered}>
-            <img
-              css={[layout.breedImg]}
-              src={props.urlArray[currentImg]}
-              alt="dog-image"
-            />
-          </div>
+          <img
+            css={[layout.breedImg]}
+            src={props.urlArray[currentImg]}
+            alt="dog-image"
+          />
         </div>
 
         <div css={arrow} onClick={() => nextImg()}>
