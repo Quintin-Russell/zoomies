@@ -25,6 +25,13 @@ const form = [
   layout.headerPadding
 ];
 const input = [style.hover];
+const sectionHeader = [
+  layout.textAlignC,
+  style.contentBackground,
+  style.borderSection,
+  style.pfDisp,
+  style.fontBlack
+];
 
 function App() {
   const [dogDataMaster, setDogDataMaster] = useState({ message: null });
@@ -48,9 +55,9 @@ function App() {
     if (alphabeticBinarySearch(processedUserSearch)) {
       const userSearchSuccessful =
         dogDataMaster[alphabeticBinarySearch(processedUserSearch)];
-      setUserSearch(userSearchSuccessful);
+      setUserSearchResult(userSearchSuccessful);
     } else {
-      setUserSearch('unsuccessful');
+      setUserSearchResult('unsuccessful');
     }
     setSearchInput('');
   };
@@ -75,6 +82,19 @@ function App() {
           looking for
         </p>
       </form>
+      {userSearchResult && userSearchResult === 'unsuccessful' && (
+        <div css={[...sectionHeader, layout.bottomMargin]}>
+          <h3>Your Search Results:</h3>
+          <p css={[style.oxygen]}>
+            We could not find the breed that you searched for. Please try again
+            or feel free to browse the full list of breeds below!
+          </p>
+        </div>
+      )}
+      <div css={sectionHeader}>
+        <h3>All Breeds</h3>
+      </div>
+
       <ul css={ul}>
         {dogDataMaster &&
           Object.keys(dogDataMaster).map((dogBreed) => {

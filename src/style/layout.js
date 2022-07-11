@@ -136,9 +136,9 @@ export default {
   //     margin: 2rem;
   //   `,
 
-  //   topMargin: css`
-  //     margin-top: 2rem;
-  //   `,
+  bottomMargin: css`
+    margin-bottom: 1rem;
+  `,
 
   leftMargin25: css`
     padding-left: 0.25rem;

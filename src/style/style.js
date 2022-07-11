@@ -101,6 +101,11 @@ export default {
     border: 0.05rem solid black;
   `,
 
+  borderSection: css`
+    border-bottom: 0.1rem solid black;
+    border-top: 0.1rem solid black;
+  `,
+
   //   noBorderBottom: css`
   //     border-top: 0.05rem solid #fff;
   //     border-left: 0.05rem solid #fff;
