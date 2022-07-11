@@ -18,5 +18,5 @@ def get_breed_img(name):
     imgReq = requests.get("https://dog.ceo/api/breed/" + name + "/images")
     parsedReq = json.loads(imgReq.content)
     return {
-    "message" : parsedReq["message"][0]
+    "message" : parsedReq["message"]
     }

@@ -14,6 +14,12 @@ export default {
   bold: css`
     font-weight: bold;
   `,
+  fontSize1rem: css`
+    font-size: 1rem;
+  `,
+  fontSize2rem: css`
+    font-size: 2rem;
+  `,
 
   //list styling
   noListStyle: css`

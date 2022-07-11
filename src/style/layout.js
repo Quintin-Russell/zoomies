@@ -29,6 +29,10 @@ export default {
   `,
 
   //width
+  width10: css`
+    width: 10%;
+  `,
+
   width50: css`
     width: 50%;
   `,
