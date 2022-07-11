@@ -7,6 +7,7 @@ import formatName from '../helper-functions/format-name';
 import style from '../style/style';
 import layout from '../style/layout';
 
+//style arrays
 const barHeader = [
   layout.row,
   layout.width100,
@@ -15,13 +16,14 @@ const barHeader = [
   style.hover
 ];
 const barTitle = [layout.headerPadding];
+//----------------------------------
 
 const InfoBar = (props) => {
   const handleClick = (event) => {
     props.setSelectedFunction(!props.selected);
   };
 
-  const renderIcon = (name, selected) => {
+  const renderIcon = (selected) => {
     if (selected) return <BiChevronDownCircle css={[layout.dogImg]} />;
     return <BiCaretDown css={[layout.dogImg]} />;
   };
@@ -31,7 +33,7 @@ const InfoBar = (props) => {
       <h4 css={barTitle}>{formatName(props.data.name)}</h4>
       <div css={[layout.row, layout.alignC]}>
         <p>Click to see more details!</p>
-        {renderIcon(props.data.name, props.selected)}
+        {renderIcon(props.selected)}
       </div>
     </div>
   );

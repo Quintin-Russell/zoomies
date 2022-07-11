@@ -1,9 +1,7 @@
 import { css } from '@emotion/react';
 
 export default {
-  hidden: css`
-    display: hidden !important;
-  `,
+  //flex-direction
   col: css`
     display: flex;
     flex-direction: column;
@@ -12,6 +10,8 @@ export default {
     display: flex;
     flex-direction: row;
   `,
+
+  //justify/align controls
   alignC: css`
     align-items: center;
   `,
@@ -24,39 +24,14 @@ export default {
     justify-content: center;
   `,
 
-  //   justEnd: css`
-  //     justify-content: flex-end;
-  //   `,
+  textAlignC: css`
+    text-align: center;
+  `,
 
-  //   justStart: css`
-  //     justify-content: flex-start;
-  //   `,
-
-  //   //width/height ctrls
-
-  //   flex33: css`
-  //     flex-basis: calc(100% / 3);
-  //   `,
-
-  //   flex50: css`
-  //     flex-basis: 50%;
-  //   `,
-
-  //   flex66: css`
-  //     flex-basis: calc(200% / 3);
-  //   `,
-
-  //   fitContent: css`
-  //     width: fit-content;
-  //   `,
-
-  //   width10: css`
-  //     width: 10%;
-  //   `,
-
-  //   width20: css`
-  //     width: 20%;
-  //   `,
+  //width
+  width10: css`
+    width: 10%;
+  `,
 
   width50: css`
     width: 50%;
@@ -70,15 +45,7 @@ export default {
     width: 100%;
   `,
 
-  //   height80: css`
-  //     height: 80%;
-  //   `,
-
-  //   height100: css`
-  //     height: 100%;
-  //   `,
-
-  //   //padding/margin ctrls
+  //padding
 
   padding0: css`
     padding: 0;
@@ -96,55 +63,37 @@ export default {
     padding-bottom: 1rem;
   `,
 
-  //   topPadding: css`
-  //     padding-top: 2rem;
-  //   `,
-
-  //   leftPadding: css`
-  //     padding-left: 1rem;
-  //   `,
-
   headerPadding: css`
     padding: 0 1rem;
   `,
 
-  //   smallSidePadding: css`
-  //     padding: 0 0.25rem;
-  //   `,
-
-  //   marginAuto: css`
-  //     margin: auto;
-  //   `,
-
+  //margin
   margin0: css`
     margin: 0;
   `,
 
-  //   marginHalfRem: css`
-  //     margin: 0.5rem;
-  //   `,
+  marginHalfRem: css`
+    margin: 0.5rem;
+  `,
 
   margin1rem: css`
     margin: 1rem;
   `,
 
-  //   margin2rem: css`
-  //     margin: 2rem;
-  //   `,
+  bottomMargin: css`
+    margin-bottom: 1rem;
+  `,
 
-  //   topMargin: css`
-  //     margin-top: 2rem;
-  //   `,
+  leftMargin25: css`
+    padding-left: 0.25rem;
+  `,
 
-  //   leftMargin: css`
-  //     padding-left: 0.5rem;
-  //   `
-  //IMGS
+  //img
   dogImg: css`
     height: 2rem;
     padding: 0 0.5rem;
   `,
   breedImg: css`
-    height: 15rem;
+    max-width: 85%;
   `
 };
