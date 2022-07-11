@@ -34,14 +34,6 @@ const Header = () => {
         <img css={dogImg} src={dogIcon} alt="Zoomies-icon" />
         <h2>Zoomies</h2>
       </div>
-
-      {/* <form css={form}>
-        <p css={[layout.margin0, layout.width100]}>Search for a breed!</p>
-        <div>
-          <input css={input} type="text" />
-          <BiSearchAlt css={[layout.padding25, style.hover]} />
-        </div>
-      </form> */}
     </header>
   );
 };

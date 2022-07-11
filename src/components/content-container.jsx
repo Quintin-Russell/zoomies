@@ -14,6 +14,7 @@ const contentContainer = [
   style.contentBackground
 ];
 const breedImg = [layout.margin1rem, layout.breedImg];
+const subBreedContainer = [layout.col, layout.textAlignC, style.noListStyle];
 
 const ContentContainer = (props) => {
   const [imgUrl, setImgUrl] = useState('');
@@ -33,11 +34,11 @@ const ContentContainer = (props) => {
       <div>
         {!imgUrl && <p>Loading...</p>}
         {imgUrl && <img css={breedImg} src={imgUrl} alt={props.data.name} />}
-        <div>
+        <div css={subBreedContainer}>
           {props.data.data.length > 0 && (
             <React.Fragment>
               <h5 css={[layout.margin0]}>Sub-Breeds</h5>
-              <ul css={[layout.bottomPadding]}>
+              <ul css={[layout.padding0, style.noListStyle]}>
                 {props.data.data.map((subBreed) => (
                   <li key={subBreed} css={[layout.padding1rem]}>
                     {formatName(subBreed)}

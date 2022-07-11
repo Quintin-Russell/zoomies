@@ -21,7 +21,7 @@ const InfoBar = (props) => {
     props.setSelectedFunction(!props.selected);
   };
 
-  const renderIcon = (name, selected) => {
+  const renderIcon = (selected) => {
     if (selected) return <BiChevronDownCircle css={[layout.dogImg]} />;
     return <BiCaretDown css={[layout.dogImg]} />;
   };
@@ -31,7 +31,7 @@ const InfoBar = (props) => {
       <h4 css={barTitle}>{formatName(props.data.name)}</h4>
       <div css={[layout.row, layout.alignC]}>
         <p>Click to see more details!</p>
-        {renderIcon(props.data.name, props.selected)}
+        {renderIcon(props.selected)}
       </div>
     </div>
   );

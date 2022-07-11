@@ -52,9 +52,7 @@ const boxContainer = [
 const Box = (props) => {
   const [selected, setSelected] = useState(false);
 
-  //   const handleClick = (event) => {
-  //     setSelected(!selected);
-  //   };
+  // console.log('props:', props);
 
   return (
     <li css={selected ? [...boxContainer, style.fontBlack] : boxContainer}>
@@ -63,14 +61,6 @@ const Box = (props) => {
         selected={selected}
         setSelectedFunction={(val) => setSelected(val)}
       />
-      {/* <div onClick={handleClick} css={boxHeader}>
-        <h4 css={boxTitle}>{formatName(props.name)}</h4>
-        <div css={[layout.row, layout.alignC]}>
-          <p>Click to see more details!</p>
-          {renderIcon(props.name, selected)}
-        </div>
-      </div> */}
-
       {selected && <ContentContainer selected={selected} data={props} />}
     </li>
   );

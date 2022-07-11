@@ -2,14 +2,19 @@ import React, { useState, useEffect } from 'react';
 
 import Header from './components/header';
 import Box from './components/box';
-import alphabeticBinarySearch from './helper-functions/alphabetic-binary-search';
 
 import { BiSearchAlt } from 'react-icons/bi';
 
 import style from './style/style';
 import layout from './style/layout';
 
-const ul = [layout.col, layout.margin0, layout.alignC, style.noListStyle];
+const ul = [
+  layout.col,
+  layout.alignC,
+  layout.margin0,
+  layout.padding0,
+  style.noListStyle
+];
 const searchTitle = [
   layout.margin0,
   layout.width100,
@@ -26,6 +31,8 @@ const form = [
 ];
 const input = [style.hover];
 const sectionHeader = [
+  layout.col,
+  layout.alignC,
   layout.textAlignC,
   style.contentBackground,
   style.borderSection,
@@ -45,17 +52,15 @@ function App() {
       setDogDataMaster(jsonData.message);
     };
     fetchAllDogData().catch((ERR) => console.log('FETCH ERROR:', ERR));
-    console.log(dogDataMaster);
   }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     let processedUserSearch = searchInput.replace(/[^a-z0-9]/gi, '');
     processedUserSearch = processedUserSearch.toLowerCase();
-    if (alphabeticBinarySearch(processedUserSearch)) {
-      const userSearchSuccessful =
-        dogDataMaster[alphabeticBinarySearch(processedUserSearch)];
-      setUserSearchResult(userSearchSuccessful);
+    if (processedUserSearch in dogDataMaster) {
+      setUserSearchResult(processedUserSearch);
     } else {
       setUserSearchResult('unsuccessful');
     }
@@ -69,27 +74,55 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <form onSubmit={handleSubmit} css={form}>
+      <form id={`breed-search-form`} onSubmit={handleSubmit} css={form}>
         <p css={searchTitle}>Search for a breed!</p>
         <div css={[layout.padding25]}>
-          <input onChange={handleSearchChange} css={input} type="text" />
-          <button css={[layout.leftMargin25]} type="submit">
+          <input
+            onChange={handleSearchChange}
+            css={input}
+            type="text"
+            placeholder={searchInput}
+          />
+          <button
+            onClick={handleSubmit}
+            css={[layout.leftMargin25]}
+            type="submit"
+          >
             <BiSearchAlt css={searchIcon} />
           </button>
         </div>
-        <p css={[layout.margin0, style.fontBlack]}>
+        <p css={[layout.margin0, layout.textAlignC, style.fontBlack]}>
           Hit the search icon and we'll see if we can find the breed you are
           looking for
         </p>
       </form>
-      {userSearchResult && userSearchResult === 'unsuccessful' && (
+      {userSearchResult && (
         <div css={[...sectionHeader, layout.bottomMargin]}>
           <h3>Your Search Results:</h3>
-          <p css={[style.oxygen]}>
-            We could not find the breed that you searched for. Please try again
-            or feel free to browse the full list of breeds below!
-          </p>
+          {userSearchResult === 'unsuccessful' && (
+            <p css={[style.oxygen]}>
+              We could not find the breed that you searched for. Please try
+              again or feel free to browse the full list of breeds below!
+            </p>
+          )}
+          {userSearchResult !== 'unsuccessful' && (
+            <Box
+              key={userSearchResult}
+              name={userSearchResult}
+              data={dogDataMaster[userSearchResult]}
+            />
+          )}
           {/* add button here to clear element and browse all breeds */}
+          <button
+            css={[layout.margin1rem]}
+            onClick={() => {
+              document.querySelector('#breed-search-form').reset();
+              setSearchInput('');
+              setUserSearchResult(null);
+            }}
+          >
+            Clear Search Results
+          </button>
         </div>
       )}
       <div css={sectionHeader}>

@@ -149,6 +149,6 @@ export default {
     padding: 0 0.5rem;
   `,
   breedImg: css`
-    height: 15rem;
+    max-width: 85%;
   `
 };
