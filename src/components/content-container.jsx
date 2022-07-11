@@ -27,7 +27,7 @@ const ContentContainer = (props) => {
     if (props.selected)
       imgFetch(props.data.name).catch((ERR) => console.log('ERROR:', ERR));
   }, []);
-  console.log('props:', props);
+
   return (
     <div css={contentContainer}>
       <div>
