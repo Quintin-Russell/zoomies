@@ -9,6 +9,7 @@ import { BiSearchAlt } from 'react-icons/bi';
 import style from './style/style';
 import layout from './style/layout';
 
+//style arrays
 const ul = [
   layout.col,
   layout.alignC,
@@ -40,6 +41,7 @@ const sectionHeader = [
   style.pfDisp,
   style.fontBlack
 ];
+//----------------------------------
 
 function App() {
   const [dogDataMaster, setDogDataMaster] = useState({ message: null });
@@ -55,9 +57,9 @@ function App() {
     fetchAllDogData().catch((ERR) => console.log('FETCH ERROR:', ERR));
   }, []);
 
+  // Handler functions
   const handleSubmit = (event) => {
     event.preventDefault();
-
     let processedUserSearch = searchInput.replace(/[^a-z0-9]/gi, '');
     processedUserSearch = processedUserSearch.toLowerCase();
     if (processedUserSearch in dogDataMaster) {
@@ -67,6 +69,7 @@ function App() {
     }
     setSearchInput('');
   };
+
   const handleSearchChange = (event) => {
     const searchValue = event.target.value;
     setSearchInput(searchValue);
@@ -75,6 +78,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
+      {/* Search bar */}
       <form id={`breed-search-form`} onSubmit={handleSubmit} css={form}>
         <p css={searchTitle}>Search for a breed!</p>
         <div css={[layout.padding25]}>
@@ -97,6 +101,7 @@ function App() {
           looking for.
         </p>
       </form>
+      {/* Search results */}
       {userSearchResult && (
         <div css={[...sectionHeader, layout.bottomMargin]}>
           <h3>Your Search Results:</h3>
@@ -113,7 +118,6 @@ function App() {
               data={dogDataMaster[userSearchResult]}
             />
           )}
-          {/* add button here to clear element and browse all breeds */}
           <button
             css={[layout.margin1rem]}
             onClick={() => {
@@ -126,6 +130,7 @@ function App() {
           </button>
         </div>
       )}
+      {/* All breed list */}
       <div css={sectionHeader}>
         <h3>All Breeds</h3>
       </div>

@@ -7,6 +7,7 @@ import formatName from '../helper-functions/format-name';
 import style from '../style/style';
 import layout from '../style/layout';
 
+//style arrays
 const barHeader = [
   layout.row,
   layout.width100,
@@ -15,6 +16,7 @@ const barHeader = [
   style.hover
 ];
 const barTitle = [layout.headerPadding];
+//----------------------------------
 
 const InfoBar = (props) => {
   const handleClick = (event) => {

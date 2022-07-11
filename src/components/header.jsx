@@ -4,9 +4,9 @@ import { css, jsx } from '@emotion/react';
 import style from '../style/style';
 import layout from '../style/layout';
 
-// import { BiSearchAlt } from 'react-icons/bi';
 import dogIcon from '../images/dog-icon.png';
 
+//style arrays
 const headerContainer = [
   layout.row,
   layout.justSpbw,
@@ -15,8 +15,6 @@ const headerContainer = [
   style.border,
   style.headerBackground
 ];
-// const form = [layout.col, layout.alignC, layout.headerPadding];
-// const input = [style.hover];
 const headerLogo = [
   layout.row,
   layout.width50,
@@ -25,6 +23,7 @@ const headerLogo = [
   layout.alignC
 ];
 const dogImg = [layout.dogImg];
+//----------------------------------
 
 const Header = () => {
   return (

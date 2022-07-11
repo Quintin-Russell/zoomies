@@ -8,6 +8,7 @@ import { BiChevronDownCircle, BiCaretDown } from 'react-icons/bi';
 import style from '../style/style';
 import layout from '../style/layout';
 
+//style arrays
 const boxContainer = [
   layout.col,
   layout.alignC,
@@ -18,6 +19,7 @@ const boxContainer = [
   style.borderLight,
   style.dropShaddow
 ];
+//----------------------------------
 
 const Box = (props) => {
   const [selected, setSelected] = useState(false);

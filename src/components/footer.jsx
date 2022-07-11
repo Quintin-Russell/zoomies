@@ -4,6 +4,7 @@ import { css, jsx } from '@emotion/react';
 import style from '../style/style';
 import layout from '../style/layout';
 
+//style arrays
 const footerContainer = [
   layout.row,
   layout.justCent,
@@ -11,7 +12,6 @@ const footerContainer = [
   style.border,
   style.headerBackground
 ];
-
 const footerLogo = [
   layout.row,
   layout.headerPadding,
@@ -19,9 +19,8 @@ const footerLogo = [
   layout.alignC,
   style.weight300
 ];
-
 const footerText = [style.pfDisp, style.bold, style.footerText, style.hover];
-const dogImg = [layout.dogImg];
+//----------------------------------
 
 const QRstring = `<QuintinRussell />`;
 

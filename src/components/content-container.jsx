@@ -6,6 +6,7 @@ import formatName from '../helper-functions/format-name';
 import style from '../style/style';
 import layout from '../style/layout';
 
+//style arrays
 const contentContainer = [
   layout.col,
   layout.justCent,
@@ -15,6 +16,7 @@ const contentContainer = [
 ];
 const breedImg = [layout.margin1rem, layout.breedImg];
 const subBreedContainer = [layout.col, layout.textAlignC, style.noListStyle];
+//----------------------------------
 
 const ContentContainer = (props) => {
   const [imgUrl, setImgUrl] = useState('');
