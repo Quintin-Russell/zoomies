@@ -38,8 +38,7 @@ const sectionHeader = [
   layout.textAlignC,
   style.contentBackground,
   style.borderSection,
-  style.pfDisp,
-  style.fontBlack
+  style.pfDisp
 ];
 //----------------------------------
 
@@ -104,9 +103,9 @@ const App = () => {
       {/* Search results */}
       {userSearchResult && (
         <div css={[...sectionHeader, layout.bottomMargin]}>
-          <h3>Your Search Results:</h3>
+          <h3 css={[style.fontBlack]}>Your Search Results:</h3>
           {userSearchResult === 'unsuccessful' && (
-            <p css={[style.oxygen]}>
+            <p css={[style.oxygen, style.fontBlack]}>
               We could not find the breed that you searched for. Please try
               again or feel free to browse the full list of breeds below!
             </p>
@@ -131,7 +130,7 @@ const App = () => {
         </div>
       )}
       {/* All breed list */}
-      <div css={sectionHeader}>
+      <div css={[...sectionHeader, style.fontBlack]}>
         <h3>All Breeds</h3>
       </div>
 
