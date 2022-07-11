@@ -4,7 +4,7 @@ import { css, jsx } from '@emotion/react';
 import style from '../style/style';
 import layout from '../style/layout';
 
-import { BiSearchAlt } from 'react-icons/bi';
+// import { BiSearchAlt } from 'react-icons/bi';
 import dogIcon from '../images/dog-icon.png';
 
 const headerContainer = [
@@ -15,8 +15,8 @@ const headerContainer = [
   style.border,
   style.headerBackground
 ];
-const form = [layout.col, layout.alignC, layout.headerPadding];
-const input = [style.hover];
+// const form = [layout.col, layout.alignC, layout.headerPadding];
+// const input = [style.hover];
 const headerLogo = [
   layout.row,
   layout.width50,
@@ -35,13 +35,13 @@ const Header = () => {
         <h2>Zoomies</h2>
       </div>
 
-      <form css={form}>
+      {/* <form css={form}>
         <p css={[layout.margin0, layout.width100]}>Search for a breed!</p>
         <div>
           <input css={input} type="text" />
           <BiSearchAlt css={[layout.padding25, style.hover]} />
         </div>
-      </form>
+      </form> */}
     </header>
   );
 };

@@ -24,6 +24,10 @@ export default {
     justify-content: center;
   `,
 
+  textAlignC: css`
+    text-align: center;
+  `,
+
   //   justEnd: css`
   //     justify-content: flex-end;
   //   `,
@@ -120,9 +124,9 @@ export default {
     margin: 0;
   `,
 
-  //   marginHalfRem: css`
-  //     margin: 0.5rem;
-  //   `,
+  marginHalfRem: css`
+    margin: 0.5rem;
+  `,
 
   margin1rem: css`
     margin: 1rem;
@@ -136,9 +140,9 @@ export default {
   //     margin-top: 2rem;
   //   `,
 
-  //   leftMargin: css`
-  //     padding-left: 0.5rem;
-  //   `
+  leftMargin25: css`
+    padding-left: 0.25rem;
+  `,
   //IMGS
   dogImg: css`
     height: 2rem;
