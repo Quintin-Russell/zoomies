@@ -88,13 +88,13 @@ export default {
     padding: 0 0.25rem;
   `,
 
-  //   padding2rem: css`
-  //     padding: 2rem;
-  //   `,
+  padding1rem: css`
+    padding: 1rem;
+  `,
 
-  //   bottomPadding: css`
-  //     padding-bottom: 5%;
-  //   `,
+  bottomPadding: css`
+    padding-bottom: 1rem;
+  `,
 
   //   topPadding: css`
   //     padding-top: 2rem;
@@ -143,5 +143,8 @@ export default {
   dogImg: css`
     height: 2rem;
     padding: 0 0.5rem;
+  `,
+  breedImg: css`
+    height: 15rem;
   `
 };
