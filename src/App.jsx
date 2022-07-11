@@ -5,7 +5,6 @@ import Box from './components/box';
 
 import style from './style/style';
 import layout from './style/layout';
-// import './reset.css';
 
 const ul = [layout.col, layout.alignC, style.noListStyle];
 
@@ -27,7 +26,6 @@ function App() {
       <ul css={ul}>
         {dogDataMaster.message &&
           Object.keys(dogDataMaster.message).map((dogBreed) => {
-            console.log(dogDataMaster.message[dogBreed]);
             return (
               <Box
                 key={dogBreed}

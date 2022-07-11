@@ -12,9 +12,12 @@ def get_all_dog_data():
     req = requests.get("https://dog.ceo/api/breeds/list/all")
     return req.content
 
-@app.route('/image/<name>')
-def get_random_img(name):
+@app.route('/image/<name>/')
+def get_breed_img(name):
     imgReq = requests.get("https://dog.ceo/api/breed/" + name + "/images")
     parsedReq = json.loads(imgReq.content)
-    randomNum = random.randrange(0, len(parsedReq["message"]) - 1)
-    return {"message" : parsedReq["message"][randomNum]}
+
+
+    return {
+    "message" : parsedReq["message"][0]
+    }
