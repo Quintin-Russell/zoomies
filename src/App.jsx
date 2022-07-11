@@ -43,7 +43,7 @@ const sectionHeader = [
 ];
 //----------------------------------
 
-function App() {
+const App = () => {
   const [dogDataMaster, setDogDataMaster] = useState({ message: null });
   const [searchInput, setSearchInput] = useState('');
   const [userSearchResult, setUserSearchResult] = useState(null);
@@ -150,6 +150,6 @@ function App() {
       <Footer />
     </React.Fragment>
   );
-}
+};
 
 export default App;
