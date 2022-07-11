@@ -8,6 +8,9 @@ export default {
   oxygen: css`
     font-family: 'Oxygen', sans-serif;
   `,
+  fontBlack: css`
+    color: black;
+  `,
   //   bold: css`
   //     font-weight: 600;
   //   `,
@@ -94,6 +97,10 @@ export default {
     border: 0.1rem solid black;
   `,
 
+  borderLight: css`
+    border: 0.05rem solid black;
+  `,
+
   //   noBorderBottom: css`
   //     border-top: 0.05rem solid #fff;
   //     border-left: 0.05rem solid #fff;
@@ -156,7 +163,18 @@ export default {
   headerBackground: css`
     background-color: #898aa6;
   `,
+  boxBackground: css`
+    background-color: #c9bbcf;
+  `,
+  contentBackground: css`
+    background-color: white;
+  `,
   dropShaddow: css`
     filter: drop-shadow(0 0.25rem 0.25rem rgb(0 0 0 / 40%)); ;
+  `,
+  hover: css`
+    :hover {
+      cursor: pointer;
+    }
   `
 };

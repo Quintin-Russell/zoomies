@@ -16,6 +16,7 @@ const headerContainer = [
   style.headerBackground
 ];
 const form = [layout.col, layout.alignC, layout.headerPadding];
+const input = [style.hover];
 const headerLogo = [
   layout.row,
   layout.width50,
@@ -37,8 +38,8 @@ const Header = () => {
       <form css={form}>
         <p css={[layout.margin0, layout.width100]}>Search for a breed!</p>
         <div>
-          <input type="text" />
-          <BiSearchAlt css={[layout.padding25]} />
+          <input css={input} type="text" />
+          <BiSearchAlt css={[layout.padding25, style.hover]} />
         </div>
       </form>
     </header>

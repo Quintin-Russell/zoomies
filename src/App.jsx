@@ -1,8 +1,13 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from './components/header';
+import Box from './components/box';
 
+import style from './style/style';
+import layout from './style/layout';
 // import './reset.css';
+
+const ul = [layout.col, layout.alignC, style.noListStyle];
 
 function App() {
   const [dogDataMaster, setDogDataMaster] = useState({ message: null });
@@ -12,12 +17,28 @@ function App() {
       const rawData = await fetch('http://localhost:5000/all/');
       const jsonData = await rawData.json();
       setDogDataMaster(jsonData);
-      console.log('DATA RECIEVED:', jsonData);
     };
     fetchAllDogData().catch((ERR) => console.log('FETCH ERROR:', ERR));
   }, []);
 
-  return <Header />;
+  return (
+    <React.Fragment>
+      <Header />
+      <ul css={ul}>
+        {dogDataMaster.message &&
+          Object.keys(dogDataMaster.message).map((dogBreed) => {
+            console.log(dogDataMaster.message[dogBreed]);
+            return (
+              <Box
+                key={dogBreed}
+                name={dogBreed}
+                data={dogDataMaster.message[dogBreed]}
+              />
+            );
+          })}
+      </ul>
+    </React.Fragment>
+  );
 }
 
 export default App;

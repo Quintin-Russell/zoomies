@@ -1,6 +1,9 @@
 import { css } from '@emotion/react';
 
 export default {
+  hidden: css`
+    display: hidden !important;
+  `,
   col: css`
     display: flex;
     flex-direction: column;
@@ -59,9 +62,9 @@ export default {
     width: 50%;
   `,
 
-  //   width80: css`
-  //     width: 80%;
-  //   `,
+  width80: css`
+    width: 80%;
+  `,
 
   width100: css`
     width: 100%;
@@ -121,9 +124,9 @@ export default {
   //     margin: 0.5rem;
   //   `,
 
-  //   margin1rem: css`
-  //     margin: 1rem;
-  //   `,
+  margin1rem: css`
+    margin: 1rem;
+  `,
 
   //   margin2rem: css`
   //     margin: 2rem;
