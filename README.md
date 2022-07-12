@@ -31,4 +31,18 @@
 8. Open up `http://localhost:3000` in your browser of choice and enjoy!
 
 
+<dl>
+  <dt>
+    Technologies Used:
+  </dt>
+</dl>
+
+- React.js
+- react hooks
+- emotion (CSS-in-JS)
+- Python 
+  - Flask  
+
 ### Have feedback or comments? Feel free to let me know! http://www.quintinrussell.us/#contact
+
+
