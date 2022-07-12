@@ -19,8 +19,13 @@
   ```shell
   npm install
   ```
-5. Start the `Flask` api proxy using the `npm run start-api` command in the terminal. 
-  -It should start on port `5000`
+5. Start the `Flask` api proxy using the `npm run start-api` command in the terminal. It should start on port `5000`
   ```shell
   npm run start-api
   ```
+6. Open a new terminal and use the `cd` command to enter into the zoomies `directory`. 
+7. Start the application using the `npm run dev` command
+  ```shell
+  npm run dev
+  ```
+8. Open up `http://localhost:3000` in your browser of choice and enjoy!
