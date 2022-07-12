@@ -1,5 +1,6 @@
 # zoomies
 ## A frontend application that displays dog breeds and sub-breeds
+
 <dl>
   <dt>
     Getting Started:
@@ -41,7 +42,20 @@
 - react hooks
 - emotion (CSS-in-JS)
 - Python 
-  - Flask  
+  - Flask
+  
+
+<dl>
+  <dt>
+    Stretch Features:
+  </dt>
+</dl>
+
+- `Back to the Top` button
+- Breed information below the image carousel in each breed section (from Wikipedia or other web-resource) 
+- Animations and transitions
+- Add the abitilty to `Favorite` breeds
+
 
 ### Have feedback or comments? Feel free to let me know! http://www.quintinrussell.us/#contact
 
