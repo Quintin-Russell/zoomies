@@ -49,6 +49,11 @@
     Demo:
   </dt>
 </dl>
+
+![Zoomies-Demo-Dog-Container](https://github.com/Quintin-Russell/zoomies/blob/main/zoomiesDemoDogCont.gif)
+
+
+![Zoomies-Demo-Search](https://github.com/Quintin-Russell/zoomies/blob/main/zoomiesDemoSearch.gif)
   
 
 <dl>
