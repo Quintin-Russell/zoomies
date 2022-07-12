@@ -29,3 +29,6 @@
   npm run dev
   ```
 8. Open up `http://localhost:3000` in your browser of choice and enjoy!
+
+
+### Have feedback or comments? Feel free to let me know! http://www.quintinrussell.us/#contact
